@@ -79,10 +79,13 @@ end
 
 describe "#multiply" do
 
-  it "multiplies two numbers"
+  it "multiplies two numbers" do 
+    expect(mult([7,11])).to eq(77)   
+  end
 
-  it "multiplies several numbers"
-  
+  it "multiplies several numbers" do
+    expect(mult([1,3,5,7,9])).to eq(945)
+  end
 end
 
 describe "#power" do
