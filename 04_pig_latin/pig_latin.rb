@@ -6,6 +6,8 @@ def translateWord (m)
 		m + "ay"
 	when /^(qu+)(.*)/ 					#regular expression for leading qu. $1= qu $2 = rest
 		$2+$1+"ay"	
+  when /^([^aeiouy])(qu+)(.*)/      #regular expression for leading consonants (not vowels) $1= complement of aeiou(consonant). $2 = rest
+    $3+$1+$2+"ay"
 	when /^([^aeiouy]+)(.*)/			#regular expression for leading consonants (not vowels) $1= complement of aeiou(consonant). $2 = rest
 		$2+$1+"ay"
 	else
